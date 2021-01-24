@@ -1,0 +1,15 @@
+h1, h2 {
+    text-align: center;
+}
+
+/* Game div */
+#MainGameDiv {
+    height: 320px;
+    width: 85vw;
+    border-style: dotted;
+    border-width: 1px;
+    z-index: 3;
+    border-color: darkgray;
+    overflow: hidden;
+    margin: auto;
+}
