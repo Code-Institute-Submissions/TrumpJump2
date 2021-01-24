@@ -5,7 +5,7 @@ var scandalBoxString = "";
 var scandalDate = "";
 let loseString = "";
 var scandalBoxString = "";
-var maxscore = 19;
+var maxScore = 18;
 
 //array to iterate through for each barrier
 let scandals = [
@@ -66,9 +66,34 @@ function ShowIntro(){
 function StartGame(){
         score = 0; //reset the score to zero when a new game is started
         scandalDate = scandalDates[score];
+        scandalText = scandals[score];
         document.getElementById("ProgressDate").innerHTML = scandalDate;
         document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameBoard").innerHTML;
+        document.getElementById("ScandalText").innerText = scandalText;
 
+
+        setInterval(GameLoop, 2000)
+
+
+
+
+}
+
+function GameLoop(){
+    if (score <= maxScore){
+    console.log(score);
+    scandalDate = scandalDates[score];
+    scandalText = scandals[score];
+    document.getElementById("ProgressDate").innerHTML = scandalDate;
+    document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameBoard").innerHTML;
+    document.getElementById("ScandalText").innerText = scandalText;
+    }else{
+    console.log("Time to end this")
+    document.getElementById("ProgressDate").innerHTML = "November 2020";
+
+
+    }
+    score = score +1;
 }
 
 function TrumpJump(){
