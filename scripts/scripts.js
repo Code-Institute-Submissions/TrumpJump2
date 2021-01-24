@@ -1,5 +1,4 @@
-var trumpImageDiv = document.getElementById("JumpingTrump"); 
-var barrier = document.getElementById("barrier");
+
 var score = 0;
 var scandalBoxString = "";
 var scandalDate = "";
@@ -70,9 +69,10 @@ function StartGame(){
         document.getElementById("ProgressDate").innerHTML = scandalDate;
         document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameBoard").innerHTML;
         document.getElementById("ScandalText").innerText = scandalText;
+        document.getElementById('tweetscandal').className = 'startMoving';
 
-
-        setInterval(GameLoop, 2000)
+        CollisionDet = setInterval(CollisionDetection, 100);
+        MyGameLoop = setInterval(GameLoop, 2000);
 
 
 
@@ -87,13 +87,46 @@ function GameLoop(){
     document.getElementById("ProgressDate").innerHTML = scandalDate;
     document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameBoard").innerHTML;
     document.getElementById("ScandalText").innerText = scandalText;
+    document.getElementById("ScandalGameOver").innerText = scandalText;
+    document.getElementById('tweetscandal').className = 'startMoving';
     }else{
     console.log("Time to end this")
+    clearInterval(CollisionDet);
+    clearInterval(MyGameLoop);
     document.getElementById("ProgressDate").innerHTML = "November 2020";
+    document.getElementById("tweetscandal").style.display = "none";
+    document.getElementById('tweetscandal').className = '';
+    document.getElementById("GameJumpButtonDiv").style.display = "none";
+
 
 
     }
     score = score +1;
+}
+
+function CollisionDetection(){
+    var trumpImageDiv = document.getElementById("JumpingTrump"); 
+    var tweetscandal = document.getElementById("tweetscandal"); 
+    let trumpTop = parseInt(window.getComputedStyle(trumpImageDiv).getPropertyValue("top")); //evaluate top position of Trump and parse as integer to remove 'px' from result
+    let barrierLeft = parseInt(window.getComputedStyle(tweetscandal).getPropertyValue("left")); //evaluate left position of Barrier and parse as integer to remove 'px' from result
+    if(barrierLeft>=-850 && barrierLeft<=-800 && trumpTop==70){ //only true if Trump and Barrier are touching
+        console.log("Boom!------------------------------->");
+        clearInterval(CollisionDet);
+        clearInterval(MyGameLoop);
+        YouDied()
+        score = 100;
+
+    }
+    console.log("TrumpTop " + trumpTop);
+    console.log("Barrier Left " + barrierLeft);
+
+}
+
+function YouDied(){
+    document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameOverFail").innerHTML;
+    document.getElementById("tweetscandal").style.display = "none";
+    document.getElementById('tweetscandal').className = '';
+    document.getElementById("GameJumpButtonDiv").style.display = "none";
 }
 
 function TrumpJump(){

@@ -39,6 +39,18 @@ h1, h2 {
     position: relative;
     visibility: hidden;
 }
+#GameOverFail{
+    height: 320px;
+    width: 85vw;
+    border-style: none;
+    border-width: 0px;
+    z-index: 1;
+    border-color: darkgray;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    visibility: hidden;
+}
 
 /* Intro Screen */
 #IntroScreenDiv {
@@ -72,7 +84,7 @@ h1, h2 {
 
 #JumpingTrump {
     height: 220px;
-    width: 240px;
+    width: 260px;
     background-image: url("../assets/trump2.png"); 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -80,6 +92,33 @@ h1, h2 {
     top: 70px;
     z-index: 10;
     left:0;
+}
+
+#tweetscandal {
+    height: 80px;
+    width: 200px;
+    border-style: dotted dashed;
+    border-width: 1px;
+    z-index: 3;
+    border-color: darkgray;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    left: 450px;
+}
+
+#GameOver{
+    height: 180px;
+    width: 420px;
+    border-style: dotted dashed;
+    border-width: 1px;
+    z-index: 3;
+    border-color: darkgray;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    left: 20px;
+    top: 20%;
 }
 
 #GameJumpButtonDiv {
@@ -143,8 +182,16 @@ h1, h2 {
     animation: jump 0.9s linear;
 }
 @keyframes jump{
-    0%{top: -20px;}
-    30%{top: -10px;}
+    0%{top: -50px;}
+    30%{top: -20px;}
     70%{top: 20px;}
     100%{top: 70px;}
+}
+
+.startMoving {
+    animation: barrier 2s infinite linear;
+}
+@keyframes barrier {
+    0%{left:100%;}
+    100%{left:-85%;}
 }
