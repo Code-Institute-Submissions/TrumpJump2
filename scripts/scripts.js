@@ -57,3 +57,12 @@ if(window.innerHeight > window.innerWidth){
     alert("Rotate your perfect phone")
 
     }
+
+function ShowIntro(){
+    document.getElementById("MainGameDiv").innerHTML = document.getElementById("IntroScreenDiv").innerHTML
+}
+
+function start(){
+        score = 0; //reset the score to zero when a new game is started
+}
+
