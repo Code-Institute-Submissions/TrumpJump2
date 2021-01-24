@@ -57,3 +57,5 @@ if(window.innerHeight > window.innerWidth){
     alert("Rotate your perfect phone")
 
     }
+
+    alert("testing")
