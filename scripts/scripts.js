@@ -1,4 +1,4 @@
-var trump = document.getElementById("trump"); 
+var trumpImageDiv = document.getElementById("JumpingTrump"); 
 var barrier = document.getElementById("barrier");
 var score = 0;
 var scandalBoxString = "";
@@ -68,6 +68,13 @@ function StartGame(){
         scandalDate = scandalDates[score];
         document.getElementById("ProgressDate").innerHTML = scandalDate;
         document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameBoard").innerHTML;
-        
+
 }
 
+function TrumpJump(){
+    document.getElementById('JumpingTrump').className = 'animate';
+
+    setTimeout(function(){
+        document.getElementById('JumpingTrump').className = '';
+    },900); // after 900ms (time for jump animaation to complete), remove class
+}

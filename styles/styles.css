@@ -137,14 +137,14 @@ h1, h2 {
 	position:relative;
 	top:1px;
     }
-    
+
 /* jump animation to add to Trump div when button clicked */
 .animate{
     animation: jump 0.9s linear;
 }
 @keyframes jump{
-    0%{top: 180px;}
-    30%{top: 20px;}
+    0%{top: -20px;}
+    30%{top: -10px;}
     70%{top: 20px;}
-    100%{top: 180px;}
+    100%{top: 70px;}
 }
