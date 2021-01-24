@@ -67,6 +67,8 @@ function StartGame(){
         scandalDate = scandalDates[score];
         scandalText = scandals[score];
         document.getElementById("ProgressDate").innerHTML = scandalDate;
+        //document.getElementById("GameJumpButtonDiv").style.display = "inline-block";
+        //document.getElementById("tweetscandal").style.display = "inline-block";
         document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameBoard").innerHTML;
         document.getElementById("ScandalText").innerText = scandalText;
         document.getElementById('tweetscandal').className = 'startMoving';
@@ -135,6 +137,17 @@ function BossFight(){
 
     document.getElementById("GameJumpButtonDiv").style.display = "none";
 }
+
+function VoterFraud(){
+    document.getElementById("VotedOutGameOver").innerHTML = "<h2>That Worked!!!</h2> You were just elected president for life and your approval numbers have never been higher. You are being promoted to godlike status over the way you attacked COVID and Dominion Voting Systems!";
+    FinalGameOver = setInterval(GameOver, 8000);
+}
+
+function GameOver(){
+    document.getElementById("VotedOutGameOver").innerHTML = "<h2>WAKE UP!!!</h2>Did you even think for a second that would actually work? Get up, you are running late for your second Impeachment trial ";
+    clearInterval(FinalGameOver);
+}
+
 
 function TrumpJump(){
     document.getElementById('JumpingTrump').className = 'animate';
