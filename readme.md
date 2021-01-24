@@ -1,5 +1,4 @@
 # 'Jump Trump' Javascript Game
-![mockup](images/mock-up.png)
 
 The live website can be found [here]()
 
@@ -32,21 +31,9 @@ This website was created to showcase my knowledge of HTML, CSS & JavaScript and 
 * The text in the barrier to change to a different scandal each time Trump jumps over one.
 * Corresponding month and year for each scandal to appear in the game.
 * A 'you lose' screen to appear informing the user how far they got when they lose.
-* An impossible-to-jump-over final barrier labelled "Election 2020"
 * A 'final' screen when the user inevitably hits the last barrier with the option to "contest results"
 * A real final screen
 
-
-#### Wireframes
-Basic wireframes for each potential screen in the game were made using Paint.
-![Wireframe](images/wireframe.jpg)
-
-
-#### Colour Scheme
-Body colour:  
-Text colour:  
-Game Board background colour:  
-Information on winning: 
 
 ****
 ## Technologies
@@ -56,14 +43,6 @@ Information on winning:
 	* This project uses custom written CSS to style the Website.
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 	* This project uses JavaScript for functionality through the Website, this includes the puzzle game, onclick button functions, use of the Email API and Google Maps APIs.
-<!-- * [jQuery](https://jquery.com/)
-    * jQuery was used throughout the hangman.js file to minipulate css and html properties.
-* [Bootstrap](https://getbootstrap.com/)
-	* The Bootstrap framework is used throughout this website for layouts and styling. 
-* [Google Fonts](https://fonts.google.com/)
-	* Google fonts are used throughout the project to import the *Playfair Display SC* and *Rokkitt* fonts.
-* [Visual Studio Code](https://code.visualstudio.com/)
-	* VS Code is the Integrated Development Environment used to develop the Website. -->
 * [GitHub](https://github.com/)
 	* GithHub is the hosting site used to store the source code for the Website and [Git Pages](https://pages.github.com/) is used for the deployment of the live site.
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
@@ -92,15 +71,16 @@ All features and user stories documented in the README were tested on different 
 * As a user, I want to know how far I got if I lose in the game.
     * The month and year of the last scandal Trump jumped over is shown on the 'you lose' screen.
 
-* As a user, I want a way to restart the game when I lose.
-    * The start button (renamed to 'restart' on this screen) appears when the player loses.
-
 HTML code passed through the [W3C HTML Validator](https://validator.w3.org/).
 
 CSS code passed through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 
 JavaScript code passed through the [JSHint Validator](https://jshint.com/).
 
+
+#### Bugs
+
+There are several bugs that I found during testing that I could not fix.
 
 GitHub Respoitory must be set to public for the live website to be displayed.
 
