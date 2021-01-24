@@ -51,9 +51,8 @@ let scandalDates = [
     "2020",
     "October 2020",
 ];
-
 if(window.innerHeight > window.innerWidth){
-    alert("Rotate your perfect phone");
+    alert("Rotate your phone");
 
     }
 
@@ -118,7 +117,7 @@ function CollisionDetection(){
     var tweetscandal = document.getElementById("tweetscandal"); 
     let trumpTop = parseInt(window.getComputedStyle(trumpImageDiv).getPropertyValue("top")); //evaluate top position of Trump and parse as integer to remove 'px' from result
     let barrierLeft = parseInt(window.getComputedStyle(tweetscandal).getPropertyValue("left")); //evaluate left position of Barrier and parse as integer to remove 'px' from result
-    if(barrierLeft>=-850 && barrierLeft<=-800 && trumpTop==70){ //only true if Trump and Barrier are touching
+    if(barrierLeft>=-850 && barrierLeft<=-600 && trumpTop==70){ //only true if Trump and Barrier are touching
         console.log("Boom!------------------------------->");
         clearInterval(CollisionDet);
         clearInterval(MyGameLoop);
