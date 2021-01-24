@@ -57,6 +57,12 @@ if(window.innerHeight > window.innerWidth){
 
     }
 
+    document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            TrumpJump()
+        }
+    }
+
 function ShowIntro(){
     document.getElementById("MainGameDiv").innerHTML = document.getElementById("IntroScreenDiv").innerHTML;
     document.getElementById("MainGameDiv").style.setProperty.style ="height: 50px";
