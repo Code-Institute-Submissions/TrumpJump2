@@ -97,6 +97,7 @@ function GameLoop(){
     document.getElementById("tweetscandal").style.display = "none";
     document.getElementById('tweetscandal').className = '';
     document.getElementById("GameJumpButtonDiv").style.display = "none";
+    BossFight();
 
 
 
@@ -126,6 +127,12 @@ function YouDied(){
     document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameOverFail").innerHTML;
     document.getElementById("tweetscandal").style.display = "none";
     document.getElementById('tweetscandal').className = '';
+    document.getElementById("GameJumpButtonDiv").style.display = "none";
+}
+
+function BossFight(){
+    document.getElementById("MainGameDiv").innerHTML = document.getElementById("FinalBoss").innerHTML;
+
     document.getElementById("GameJumpButtonDiv").style.display = "none";
 }
 
