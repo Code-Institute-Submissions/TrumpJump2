@@ -28,7 +28,7 @@ let scandals = [
     'Impeachment #1', 
     'COVID-19 Response', 
     'Amy Coney Barrett'
-]
+];
 
 // array to iterate through for the date over the game and also to show how far you got if you hit the barrier 
 let scandalDates = [
@@ -51,18 +51,23 @@ let scandalDates = [
     "December 2019",
     "2020",
     "October 2020",
-]
+];
 
 if(window.innerHeight > window.innerWidth){
-    alert("Rotate your perfect phone")
+    alert("Rotate your perfect phone");
 
     }
 
 function ShowIntro(){
-    document.getElementById("MainGameDiv").innerHTML = document.getElementById("IntroScreenDiv").innerHTML
+    document.getElementById("MainGameDiv").innerHTML = document.getElementById("IntroScreenDiv").innerHTML;
+    document.getElementById("MainGameDiv").style.setProperty.style ="height: 50px";
 }
 
-function start(){
+function StartGame(){
         score = 0; //reset the score to zero when a new game is started
+        scandalDate = scandalDates[score];
+        document.getElementById("ProgressDate").innerHTML = scandalDate;
+        document.getElementById("MainGameDiv").innerHTML = document.getElementById("GameBoard").innerHTML;
+        
 }
 

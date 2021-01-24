@@ -10,7 +10,7 @@
     <h1>Trump Jump</h1>
     <div id='MainDiv'>
         <div id='ProgressDate'>
-            The Current Date Will Go Here
+            
         </div>
         <!-- Div to render main game board-->
         <div id="MainGameDiv">
@@ -23,9 +23,27 @@
 <!-- Supporting Divs-->
     <!-- Main Controls-->
         <div id="IntroScreenDiv">
-            <h2>Trump Jump 2</h2>
-            <button class="MainButtons">Start Game</a>
+            <img src="assets/trump2.png" alt="Trump Cartoon" style="float:left;width:35%;height:100%;">
+            <span style="float:left;width:50%;height:100%;">
+                <br /> <br />
+                <h3>- Tap/click on the jump button to make Trump jump<br>- Jump over all 20 hurdles to win</h3>
+                <center><button class="MainButtons" OnClick="StartGame()">Start Game</button></center>
+                
+            </span>
         </div>
+    
+    <!-- Game Board -->
+        <div id="GameBoard" style="visibility: hidden;">
+
+            <div id="JumpingTrump">
+
+            </div>
+
+            <div id="GameJumpButtonDiv">
+                <a href="#" class="JumpButton" OnClick="Jump()">Jump</a>
+            </div>
+        </div>
+
 
 
     </body>
